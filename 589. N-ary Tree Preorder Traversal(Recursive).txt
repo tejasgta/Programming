@@ -1,0 +1,24 @@
+"""
+# Definition for a Node.
+class Node:
+    def __init__(self, val=None, children=None):
+        self.val = val
+        self.children = children
+"""
+
+#Recursive Approach with O(N) Time Complexity
+class Solution:
+    
+    def preorderhelper(self, root: 'Node') -> None:
+        if(not root):
+            return
+        result.append(root.val)
+        for child in root.children:
+            self.preorderhelper(child)
+    
+    def preorder(self, root: 'Node') -> List[int]:
+        global result
+        result = []
+        self.preorderhelper(root)
+        return result
+        
